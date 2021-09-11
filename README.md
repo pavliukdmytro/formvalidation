@@ -1,7 +1,7 @@
-#Simple Form validation
+# Simple Form validation
 
-###init
-``` js
+### init
+``` javascript
  const formValidation =  new FormValidation({
         formSelector: '.def-validation', // forms identifier
         invalidClassName: 'def-invalid', // class for require and invalid input
@@ -14,8 +14,8 @@
     });
  ```
 
-###destroy 
-```js
+### destroy 
+```javascriptcript
 formValidation.destroy();
 ```
 
@@ -23,6 +23,9 @@ formValidation.destroy();
 pattern uses for browser validation
 
 ### Example
+[example page](https://pavliukdmytro.github.io/formvalidation/)
+
+
 ```html
 <link rel="stylesheet" href="FormValidationStyles.css">
 <form action="javascript: alert('send')" class="def-validation">
