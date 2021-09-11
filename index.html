@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="FormValidationStyles.css">
+</head>
+<body>
+    <form action="javascript: alert('send')" class="def-validation">
+        <input type="text" required placeholder="text">
+        <br>
+        <label>
+            <input type="text" required placeholder="text">
+            <span class="def-error">some text</span>
+        </label>
+        <br>
+        <label>
+            <input type="text" required placeholder="1234" pattern="1234">
+            <span class="def-error">valid number is 1234</span>
+        </label>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+
+    <script src="FormValidation.js"></script>
+    <script>
+        const formValidation =  new FormValidation({
+            formSelector: '.def-validation',
+            invalidClassName: 'def-invalid',
+            onInvalid(e) {
+                console.log(e, 'invalid');
+                // your code
+            },
+            onFocusIn(e) {
+                console.log(e, 'focus');
+                // your code
+            },
+        });
+    </script>
+</body>
+</html>

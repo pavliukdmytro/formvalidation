@@ -1,0 +1,9 @@
+.def-invalid{
+    border: 1px solid red;
+}
+.def-error{
+    display: none;
+}
+.def-invalid ~ .def-error {
+    display: inline;
+}
